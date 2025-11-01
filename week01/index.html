@@ -3,42 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WDD 131 – Dynamic Web Fundamentals – Goodluck O. Aberare</title>
-  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals. Rubia M. Francesco. Student profile, web development resources, and country highlights.">
-  <meta name="author" content="Goodluck O. Aberare>
+  <title>WDD 131: Dynamic Web Fundamentals - Goodluck O. Aberare</title>
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals. Student profile, web development resources, and country highlights.">
+  <meta name="author" content="Goodluck O. Aberare">
   <link rel="stylesheet" href="base.css">
   <script src="getdates.js" defer></script>
 </head>
 <body>
   <header>
-    <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+    <h1>WDD 131: Dynamic Web Fundamentals - <span class="highlight">Goodluck O. Aberare</span></h1>
     <nav>
-      <a href="https://www.linkedin.com/in/goodluckaberare">LinkedIn</a>
-      <a href="#about">About Me</a>
-      <a href="#country">Countries</a>
-      <a href="#scripture">Scripture</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Canvas</a>
+      <a href="#">Scripture</a>
+      <a href="#">Final Project</a>
     </nav>
   </header>
 
   <main>
-    <h1>Goodluck O. Aberare/h1>
-
-    <section class="card" id="about">
+    <section class="card about">
       <h2>About Me</h2>
-      <img src="rubia.jpg" alt="Portrait of Goodluck O. Aberare">
-      <p>My name is Goodluck Aberare. I was born in Nigeria and currently live with my family in Lagos State. I work as an Administrative Assistant in a logistics company, where I’ve gained valuable experience in organization, communication, and teamwork. My family means the world to me, and I truly enjoy spending quality time with them. I’m passionate about learning new things, improving my skills, and exploring creative ideas that help me grow personally and professionally. I believe in hard work, positivity, and making a meaningful impact wherever I go. Thank you.</p>
+      <div class="about-content">
+        <p>My name is Goodluck Aberare. I was born in Nigeria and currently live with my family in Lagos State. 
+        I work as an Administrative Assistant in a logistics company, where I’ve gained valuable experience 
+        in organization, communication, and teamwork. My family means the world to me, and I truly enjoy spending 
+        quality time with them. I’m passionate about learning new things, improving my skills, and exploring 
+        creative ideas that help me grow personally and professionally. I believe in hard work, positivity, 
+        and making a meaningful impact wherever I go.</p>
+
+        <img src="profile.jpeg" alt="Portrait of Goodluck O. Aberare">
+      </div>
+
+      <h3>Lagos, Nigeria</h3>
+      <div class="country">
+        <img src="nigeriaflag.jpg" alt="Official Flag of Nigeria">
+        <p>Nigeria is located in West Africa and is often called the "Giant of Africa" for its large population, 
+        cultural diversity, and growing influence on the continent. It is a nation blessed with rich natural resources, 
+        vibrant traditions, and hardworking, creative people. Nigeria is made up of 36 states and the Federal Capital 
+        Territory, Abuja, and is home to over 250 ethnic groups, including Yoruba, Igbo, and Hausa. Despite our 
+        differences, Nigerians are united by a strong spirit of resilience, hospitality, and hope. From our colorful 
+        festivals, delicious foods like jollof rice and pounded yams, to our world-famous music and entertainment 
+        industry, Nigeria is a place full of life and inspiration.</p>
+      </div>
     </section>
 
-    <section class="card" id="country">
-      <h2>Lagos, Nigeria</h2>
-      <img src="madagascar-flag.png" alt="Official Flag of Madagascar">
-      <p>Nigeria is located in West Africa and is often called the "Giant of Africa" for its large population, cultural diversity, and growing influence on the continent. It is a nation blessed with rich natural resources, vibrant traditions, and hardworking, creative people. Nigeria is made up of 36 states and the Federal Capital Territory, Abuja, and is home to over 250 ethnic groups, including Yoruba, Igbo, and Hausa. Despite our differences, Nigerians are united by a strong spirit of resilience, hospitality, and hope. From our colorful festivals, delicious foods like jollof rice and pounded yams, to our world-famous music and entertainment industry, Nigeria is a place full of life and inspiration.</p>
+    <section class="card resources">
+      <h2>Web Dev Resources</h2>
+      <ul>
+        <li><a href="https://dev.to">Dev.to Community</a></li>
+        <li><a href="https://www.smashingmagazine.com/">Smashing Magazine</a></li>
+        <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
+        <li><a href="https://www.w3schools.com/">W3 Schools</a></li>
+        <li><a href="https://www.udemy.com/">Udemy</a></li>
+        <li><a href="https://dummyimage.com/">Image Placeholder</a></li>
+      </ul>
     </section>
   </main>
 
   <footer>
-    <p>&copy;<span id="year"></span> Goodluck Omamuyovwi Aberare| Nigeria</p>
-    <p>Last Updated: 01/08/2025 12:13 AM</p>
+    <p>&copy;<span id="year"></span> Goodluck Omamuyovwi Aberare 🟦 Nigeria</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
   </footer>
 </body>
 </html>

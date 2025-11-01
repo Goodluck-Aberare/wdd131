@@ -1,6 +1,7 @@
-// getdates.js
 document.addEventListener("DOMContentLoaded", () => {
   const yearSpan = document.getElementById("year");
-  const currentYear = new Date().getFullYear();
-  yearSpan.textContent = currentYear;
+  const lastModifiedSpan = document.getElementById("lastModified");
+
+  yearSpan.textContent = new Date().getFullYear();
+  lastModifiedSpan.textContent = document.lastModified;
 });

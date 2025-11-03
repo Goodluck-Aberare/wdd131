@@ -31,14 +31,22 @@ header .highlight {
 }
 
 /* Navigation */
-nav {
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
   margin-top: 0.5rem;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 1rem;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin: 0 1rem;
   font-weight: 500;
   transition: color 0.3s;
 }
@@ -86,6 +94,7 @@ main {
   border: 2px solid #ddd;
 }
 
+/* Country Section */
 .country {
   display: flex;
   align-items: flex-start;
@@ -102,6 +111,11 @@ main {
 /* Resources Section */
 .resources ul {
   list-style: none;
+  padding-left: 0;
+}
+
+.resources li {
+  margin-bottom: 0.5rem;
 }
 
 .resources a {
@@ -125,4 +139,18 @@ footer {
 
 footer p {
   margin: 0.3rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .about-content,
+  .country {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }

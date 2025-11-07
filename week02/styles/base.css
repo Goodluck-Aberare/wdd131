@@ -1,0 +1,156 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Body */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #1e3a5f;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+header h1 {
+  font-size: 1.4rem;
+}
+
+header .highlight {
+  color: #f2c94c;
+  font-weight: bold;
+}
+
+/* Navigation */
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-top: 0.5rem;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #f2c94c;
+}
+
+/* Main Layout */
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Card Design */
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  color: #1e3a5f;
+  border-bottom: 2px solid #f2c94c;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+/* About Section */
+.about-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.about-content img {
+  width: 120px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+}
+
+/* Country Section */
+.country {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.country img {
+  width: 100px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Resources Section */
+.resources ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.resources li {
+  margin-bottom: 0.5rem;
+}
+
+.resources a {
+  color: #1e3a5f;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.resources a:hover {
+  color: #f2c94c;
+}
+
+/* Footer */
+footer {
+  background-color: #1e3a5f;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0.3rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .about-content,
+  .country {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

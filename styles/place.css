@@ -1,0 +1,61 @@
+:root {
+  --primary-color: #008751; /* Nigerian green */
+  --accent-color: #fcd116;  /* Yellow from the flag */
+  --text-color: #333;
+  --bg-color: #f4f4f4;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.intro {
+  padding: 1rem;
+  background-color: white;
+}
+
+.weather {
+  padding: 1rem;
+  background-color: #e0f7fa;
+}
+
+.weather-icon::after {
+  content: "⛅";
+  margin-left: 0.5rem;
+}
+
+.mobile-weather-icon {
+  display: none;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  .weather-icon::after {
+    content: "";
+  }
+
+  .mobile-weather-icon {
+    display: inline;
+    width: 24px;
+    height: 24px;
+  }
+}

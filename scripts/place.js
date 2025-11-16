@@ -1,6 +1,5 @@
-// Static values for demo
-const temperature = 28; // in Celsius
-const windSpeed = 10;   // in km/h
+const temperature = 28; // °C
+const windSpeed = 10;   // km/h
 
 function calculateWindChill(temp, speed) {
   return (

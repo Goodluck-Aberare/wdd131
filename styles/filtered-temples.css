@@ -47,7 +47,7 @@ nav a:hover {
 }
 
 main {
-  max-width: 600px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 1rem;
 }
@@ -81,6 +81,7 @@ img {
 figcaption {
   margin-top: 0.5rem;
   font-weight: bold;
+  font-size: 0.9rem;
 }
 
 footer {

@@ -9,7 +9,7 @@ const nav = document.getElementById("main-nav");
 menuToggle.addEventListener("click", () => {
   const isVisible = nav.style.display === "flex";
   nav.style.display = isVisible ? "none" : "flex";
-  menuToggle.textContent = isVisible ? "\u2630" : "X"; // Hamburger or Close
+  menuToggle.textContent = isVisible ? "\u2630" : "X";
 });
 
 // Temple data array
@@ -21,59 +21,54 @@ const temples = [
     { templeName: "Washington D.C.", location: "Kensington, Maryland, United States", dedicated: "1974, November, 19", area: 156558, imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg" },
     { templeName: "Lima Perú", location: "Lima, Perú", dedicated: "1986, January, 10", area: 9600, imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg" },
     { templeName: "Mexico City Mexico", location: "Mexico City, Mexico", dedicated: "1983, December, 2", area: 116642, imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg" },
-    { templeName: "Accra Ghana", location: "Accra, Ghana", dedicated: "2004, January, 11", area: 17500, imageUrl: "https://churchofjesuschristtemples.org/accra-ghana-temple/photographs/#Gallery-13" },
-    { templeName: "Salt Lake Utah", location: "Salt Lake City, Utah, United States", dedicated: "1893, April, 6", area: 382207, imageUrl: "https://churchofjesuschristtemples.org/salt-lake-temple/photographs/#Gallery-12" }
+    { templeName: "Accra Ghana", location: "Accra, Ghana", dedicated: "2004, January, 11", area: 17500, imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg" },
+    { templeName: "Salt Lake Utah", location: "Salt Lake City, Utah, United States", dedicated: "1893, April, 6", area: 382207, imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg" }
 ];
 
-// Function to create and display temple cards
+// Function to display temples
 function displayTemples(filteredTemples) {
-    const gallery = document.querySelector(".gallery");
-    gallery.innerHTML = ""; // Clear current gallery
+  const gallery = document.querySelector(".gallery");
+  gallery.innerHTML = "";
 
-    filteredTemples.forEach(temple => {
-        const figure = document.createElement("figure");
+  filteredTemples.forEach(temple => {
+    const figure = document.createElement("figure");
 
-        const img = document.createElement("img");
-        img.src = temple.imageUrl;
-        img.alt = temple.templeName;
-        img.loading = "lazy"; // Lazy loading
+    const img = document.createElement("img");
+    img.src = temple.imageUrl;
+    img.alt = temple.templeName;
+    img.loading = "lazy";
 
-        const figcaption = document.createElement("figcaption");
-        figcaption.innerHTML = `
-            <strong>${temple.templeName}</strong><br>
-            Location: ${temple.location}<br>
-            Dedicated: ${temple.dedicated}<br>
-            Area: ${temple.area.toLocaleString()} sq ft
-        `;
+    const figcaption = document.createElement("figcaption");
+    figcaption.innerHTML = `
+      <strong>${temple.templeName}</strong><br>
+      Location: ${temple.location}<br>
+      Dedicated: ${temple.dedicated}<br>
+      Area: ${temple.area.toLocaleString()} sq ft
+    `;
 
-        figure.appendChild(img);
-        figure.appendChild(figcaption);
-        gallery.appendChild(figure);
-    });
+    figure.appendChild(img);
+    figure.appendChild(figcaption);
+    gallery.appendChild(figure);
+  });
 }
 
-// Initial display of all temples
+// Initial display
 displayTemples(temples);
 
-// Filter temples based on menu selection
+// Filter temples via menu
 nav.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", event => {
-        event.preventDefault();
-        const filter = link.dataset.filter;
+  link.addEventListener("click", event => {
+    event.preventDefault();
+    const filter = link.dataset.filter;
 
-        let filteredTemples = temples;
-        if (filter === "old") {
-            filteredTemples = temples.filter(t => new Date(t.dedicated).getFullYear() < 1900);
-        } else if (filter === "new") {
-            filteredTemples = temples.filter(t => new Date(t.dedicated).getFullYear() > 2000);
-        } else if (filter === "large") {
-            filteredTemples = temples.filter(t => t.area > 90000);
-        } else if (filter === "small") {
-            filteredTemples = temples.filter(t => t.area < 10000);
-        }
+    let filteredTemples = temples;
+    if (filter === "old") filteredTemples = temples.filter(t => new Date(t.dedicated).getFullYear() < 1900);
+    else if (filter === "new") filteredTemples = temples.filter(t => new Date(t.dedicated).getFullYear() > 2000);
+    else if (filter === "large") filteredTemples = temples.filter(t => t.area > 90000);
+    else if (filter === "small") filteredTemples = temples.filter(t => t.area < 10000);
 
-        displayTemples(filteredTemples);
-        nav.style.display = "none"; // Close menu on selection (mobile)
-        menuToggle.textContent = "\u2630"; // Reset hamburger icon
-    });
+    displayTemples(filteredTemples);
+    nav.style.display = "none";
+    menuToggle.textContent = "\u2630";
+  });
 });

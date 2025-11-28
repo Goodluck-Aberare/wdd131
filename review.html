@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation</title>
+</head>
+<body>
+
+    <main>
+        <h1>Thank You for Your Review!</h1>
+
+        <p>Your review has been submitted successfully.</p>
+
+        <p id="counter"></p>
+    </main>
+
+    <footer>
+        <p>©2025 🌸 Goodluck Omamuyovwi Aberare 🌸</p>
+        <p>Last Modification: 11/28/2025 13:56:10</p>
+        <p>Nigeria</p>
+    </footer>
+
+    <script>
+        // Review Counter
+        let count = localStorage.getItem("reviewCount");
+
+        if (!count) {
+            count = 0;
+        }
+
+        count++;
+        localStorage.setItem("reviewCount", count);
+
+        document.getElementById("counter").textContent =
+            "Total Reviews Submitted: " + count;
+    </script>
+
+</body>
+</html>

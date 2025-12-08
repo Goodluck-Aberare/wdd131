@@ -2,34 +2,30 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4eef6;
     margin: 0;
-    padding: 0;
+}
+
+header {
+    background: #4a2c5a;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
 }
 
 main {
     width: 90%;
     max-width: 500px;
     margin: 20px auto;
-    background: #fff;
+    background: #ffffff;
     padding: 20px;
     border-radius: 10px;
 }
 
-h1 {
-    text-align: center;
-    color: #4a2c5a;
-}
-
 label, legend {
-    font-weight: bold;
-    display: block;
     margin-top: 15px;
-    color: #3b2344;
+    font-weight: bold;
 }
 
-input[type="text"],
-input[type="date"],
-select,
-textarea {
+input, select, textarea {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
@@ -38,25 +34,31 @@ textarea {
 }
 
 input[type="submit"] {
-    width: 100%;
     margin-top: 20px;
-    padding: 10px;
-    background-color: #4a2c5a;
-    color: white;
+    background: #4a2c5a;
+    color: #fff;
     border: none;
-    font-size: 16px;
-    border-radius: 5px;
+    padding: 10px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
-input[type="submit"]:hover {
-    background-color: #6b3f7d;
+@media (max-width: 480px) {
+    main {
+        width: 95%;
+        padding: 15px;
+    }
+
+    input[type="submit"] {
+        font-size: 14px;
+        padding: 8px;
+    }
 }
 
 footer {
     text-align: center;
-    padding: 10px;
     background: #4a2c5a;
     color: white;
+    padding: 15px;
     margin-top: 20px;
 }

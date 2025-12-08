@@ -8,10 +8,9 @@ const products = [
 
 const select = document.getElementById("product");
 
-// Populate Select Options
-products.forEach(prod => {
-    let option = document.createElement("option");
-    option.value = prod.id;
-    option.textContent = prod.name;
+products.forEach(item => {
+    const option = document.createElement("option");
+    option.value = item.id;
+    option.textContent = item.name;
     select.appendChild(option);
 });

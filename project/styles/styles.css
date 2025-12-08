@@ -26,10 +26,9 @@ header {
   align-items: center;
 }
 
-.logo {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.5rem;
-  font-weight: bold;
+.logo img {
+  height: 50px;
+  width: auto;
 }
 
 nav {
@@ -46,9 +45,12 @@ nav {
   color: #00BFFF;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
+.nav-links a:hover,
 .nav-links a.active {
+  color: #ffffff;
   text-decoration: underline;
 }
 
@@ -88,6 +90,11 @@ nav {
   font-size: 1rem;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: #0099cc;
 }
 
 /* Sections */
@@ -152,6 +159,11 @@ ul {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #002244;
 }
 
 .feedback {
